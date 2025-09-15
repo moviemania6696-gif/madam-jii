@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Forever Starts Now</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="moments.html">Moments</a>
+    <a href="boundaries.html">Boundaries</a>
+    <a href="future.html">Future</a>
+    <a href="forever.html">Forever</a>
+  </nav>
+
+  <div class="page-container">
+    <h1 style="font-size: 4rem; color: #d6336c; text-shadow: 0 0 20px rgba(255,105,180,0.5);">
+      FOREVER STARTS NOW
+    </h1>
+    <p style="font-size: 1.5rem; margin: 30px 0; font-style: italic;">
+      “This isn’t the end of the website —<br />it’s the beginning of everything I promise you.”
+    </p>
+    <button onclick="playVoice()" class="btn" style="background: #ff6b9d; font-size: 1.3rem;">
+      💌 Hear My Heart (Click Me)
+    </button>
+    <p style="margin-top: 30px; font-size: 1.1rem;">
+      P.S. I’m waiting for you in the living room with flowers 😉
+    </p>
+  </div>
+
+  <script>
+    function createPetal() {
+      const petal = document.createElement('div');
+      petal.innerHTML = '🌹';
+      petal.className = 'petal';
+      petal.style.left = Math.random() * 100 + 'vw';
+      petal.style.top = '-50px';
+      petal.style.fontSize = (Math.random() * 20 + 10) + 'px';
+      document.body.appendChild(petal);
+
+      setTimeout(() => { petal.remove(); }, 10000);
+    }
+
+    setInterval(createPetal, 300);
+
+    function playVoice() {
+      const audio = new Audio('assets/audio/love-message.mp3');
+      audio.play().catch(e => alert("Please tap to unmute ❤️ (Browser policy)"));
+    }
+  </script>
+</body>
+</html>
