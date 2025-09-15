@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Boundaries of Love</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="moments.html">Moments</a>
+    <a href="boundaries.html">Boundaries</a>
+    <a href="future.html">Future</a>
+    <a href="forever.html">Forever</a>
+  </nav>
+
+  <div class="page-container">
+    <h1>🌿 Boundaries of Love</h1>
+    <p style="font-size: 1.2rem; margin: 20px 0;">
+      “Our boundaries aren’t walls — they’re the frame that holds our masterpiece.”
+    </p>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; margin-top: 40px;">
+      <div class="boundary-box" onclick="toggleActive(this)" data-text="I love you enough to let you breathe — because love isn’t a cage, it’s wings.">
+        <h3>Space</h3>
+      </div>
+      <div class="boundary-box" onclick="toggleActive(this)" data-text="I trust you not because you never fail, but because I choose to believe in us — every day.">
+        <h3>Trust</h3>
+      </div>
+      <div class="boundary-box" onclick="toggleActive(this)" data-text="Let’s grow separately so we can bloom together — roots deep, branches wide.">
+        <h3>Growth</h3>
+      </div>
+    </div>
+
+    <div id="boundary-text" style="margin-top: 30px; font-size: 1.1rem; max-width: 600px; min-height: 60px; font-style: italic;"></div>
+
+    <a href="future.html" class="btn" style="margin-top: 40px;">Next: Our Future 🌠</a>
+  </div>
+
+  <script>
+    function toggleActive(el) {
+      document.querySelectorAll('.boundary-box').forEach(box => box.classList.remove('active'));
+      el.classList.add('active');
+      document.getElementById('boundary-text').innerText = el.getAttribute('data-text');
+    }
+  </script>
+</body>
+</html>
